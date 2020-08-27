@@ -21,12 +21,22 @@
         <p>Junior верстальщик</p>
       </div>
     </section>
-
+    <center id="time"></center>
+    <script>
+      setInterval (
+              function ()
+              {
+                var a = new Date (); with (a)
+                document.getElementById ('time').innerHTML =
+                        'Текущее время ' + [getHours (), getMinutes (), getSeconds ()].join (':');
+              },
+              1000);
+    </script>
     <section class="intro">
       <div class="container">
         <h2 class="subheading">Давайте познакомимся</h2>
         <h3>Пара слов о себе</h3>
-        <p>Текст с парой слов о себе.</p>
+        <p id="poll">Текст с парой слов о себе.</p>
         <h3>Чем могу быть полезен</h3>
         <p>Текст о том, чем могу быть полезен.</p>
       </div>
@@ -41,7 +51,9 @@
 
         <h3>Блог начинающего верстальщика</h3>
         <p>Статический блог про обучение HTML и CSS.</p>
+
       </div>
+
     </section>
 
     <footer class="page-footer">
